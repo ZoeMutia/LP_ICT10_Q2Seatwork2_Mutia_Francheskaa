@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(180deg, #fde2e4, #fad2e1, #bee1e6);
+            font-family: 'Poppins', sans-serif;
+            color: #5b4b49;
+        }
+
+        .card {
+            max-width: 520px;
+            margin: 70px auto;
+            background-color: #fffafc;
+            border-radius: 25px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            border: 2px solid #f9d1dc;
+        }
+
+        h3 {
+            color: #e68cb0;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .btn-cute {
+            background-color: #f7b7e0;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .btn-cute:hover {
+            background-color: #f28db2;
+        }
+
+        .alert-pastel {
+            background-color: #ffe5ec;
+            color: #b0527a;
+            border-radius: 10px;
+            border: 1px solid #ffc2d1;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3>✨ Student Grade Calculator ✨</h3>
+
+        <div class="mb-3">
+            <label>👧 First Name</label>
+            <input type="text" id="firstname" class="form-control" placeholder="Type your first name..." required>
+        </div>
+
+        <div class="mb-3">
+            <label>🧑 Last Name</label>
+            <input type="text" id="lastname" class="form-control" placeholder="Type your last name..." required>
+        </div>
+
+        <h6 class="fw-bold mt-4 mb-3">📚 Enter your grades:</h6>
+        <div class="row">
+            <div class="col-6 mb-3">
+                <label>🧮 Math</label>
+                <input type="number" id="Math" step="0.01" class="form-control" required>
+            </div>
+            <div class="col-6 mb-3">
+                <label>🔬 Science</label>
+                <input type="number" id="Science" step="0.01" class="form-control" required>
+            </div>
+            <div class="col-6 mb-3">
+                <label>📖 English</label>
+                <input type="number" id="English" step="0.01" class="form-control" required>
+            </div>
+            <div class="col-6 mb-3">
+                <label>🗣️ Filipino</label>
+                <input type="number" id="Filipino" step="0.01" class="form-control" required>
+            </div>
+            <div class="col-6 mb-3">
+                <label>🏃 PE</label>
+                <input type="number" id="PE" step="0.01" class="form-control" required>
+            </div>
+        </div>
+
+        <button class="btn btn-cute w-100 mt-3" py-click="calculate_gwa">Calculate GWA</button>
+
+        <div id="result" class="alert-pastel mt-4"></div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
+
